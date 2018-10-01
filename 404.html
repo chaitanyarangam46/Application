@@ -1,28 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-
-  <title>Match your application's title</title>
-
+  <meta charset="utf-8">
+  <title>Services</title>
+  <base href="https://chaitanyarangam46.github.io/Application/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+<link rel="stylesheet" href="styles.f2ac592c0f90c26e84c4.css"></head>
+<body>
+  <app-root></app-root>
   <script>
-    // Store the URL the user was trying to access when receiving the 404.
-    sessionStorage.redirect = location.href;
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
   </script>
 
-  <!-- Immediately redirect to the base URL so we can use the SPA routing. -->
-  <meta http-equiv="refresh" content="0;URL='https://chaitanyarangam46.github.io/TestApplication'"></meta>
-</head>
-
-<body>
-<!-- IE required at least 512 bytes of data to show non-default 404. -->
-             
-             
-             
-</body>    
-            
-             
-</body>
-
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.9f773b75ffcda6bb2a95.js"></script><script type="text/javascript" src="scripts.968f55bfb751cd0febb2.js"></script><script type="text/javascript" src="main.541f644ee4386d8aacb9.js"></script></body>
 </html>
